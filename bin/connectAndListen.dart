@@ -37,8 +37,7 @@ class ConnectAndListen {
 
     socket.on('connect', (data) => print('Connected as a Driver!'));
 
-    socket.emit('post', 'Hello from Driver');
-    socket.emit('post', '{"lat":21.2020,"lng":21.2020}');
+    socket.emit('location', '{"lat":21.2020,"lng":21.2020}');
 
     socket.on(
       'disconnect',
